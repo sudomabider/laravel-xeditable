@@ -1,0 +1,20 @@
+{
+    "name": "sudomabider/laravel-xeditable",
+    "description": "x-editable integration with Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sudomabider",
+            "email": "veoc.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/http": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sudomabider\\LaravelXEditable\\": "src/"
+        }
+    }
+}

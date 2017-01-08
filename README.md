@@ -1,0 +1,1 @@
+# A simple package to make xeditable easier to use within Laravel.
