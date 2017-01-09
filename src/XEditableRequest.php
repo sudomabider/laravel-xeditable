@@ -56,9 +56,4 @@ class XEditableRequest extends FormRequest
         $this->request->remove('value');
         $this->request->set($name, $value);
     }
-
-    public function authorize()
-    {
-        return true;
-    }
 }
