@@ -8,10 +8,10 @@
 
 namespace Sudomabider\LaravelXEditable;
 
-use Illuminate\Http\Request;
+use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Validator;
 
-class XEditableRequest extends Request
+class XEditableRequest extends FormRequest
 {
     protected function allowedEditableNames()
     {
@@ -42,6 +42,11 @@ class XEditableRequest extends Request
         parent::validate();
     }
 
+    public function authorize()
+    {
+        return true;
+    }
+
     private function normalizeXEditableRequestData()
     {
         // copying the parameters first because there might be a name collision
@@ -50,5 +55,10 @@ class XEditableRequest extends Request
         $this->request->remove('name');
         $this->request->remove('value');
         $this->request->set($name, $value);
+    }
+
+    public function authorize()
+    {
+        return true;
     }
 }
