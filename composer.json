@@ -3,6 +3,7 @@
     "description": "x-editable integration with Laravel",
     "type": "library",
     "license": "MIT",
+    "version": "0.1",
     "authors": [
         {
             "name": "sudomabider",
